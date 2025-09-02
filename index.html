@@ -9,55 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f1f5f9; /* bg-slate-100 */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .fade-in { animation: fadeIn 0.5s ease-in-out forwards; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .card-style {
-            background-color: #ffffff; /* bg-white */
-            border: 1px solid #e2e8f0; /* border-slate-200 */
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
-        }
-        .modal-backdrop { background-color: rgba(0,0,0,0.5); }
-        .slide-in-up { animation: slideInUp 0.3s ease-out; }
-        @keyframes slideInUp {
-             from { opacity: 0; transform: translateY(20px) scale(0.98); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        .tab-btn { 
-            padding: 8px 16px; cursor: pointer; border-bottom: 3px solid transparent; 
-            color: #475569; /* slate-600 */
-            font-weight: 600; transition: all 0.2s; 
-        }
-        .tab-btn:hover { color: #0f172a; } /* slate-900 */
-        .tab-btn.active { 
-            color: #2563eb; /* blue-600 */
-            border-bottom-color: #2563eb; 
-        }
-        .filter-btn {
-            background-color: #e2e8f0; /* slate-200 */
-            color: #475569; /* slate-600 */
-            padding: 6px 12px; border-radius: 9999px; font-weight: 500; transition: all 0.2s;
-        }
-        .filter-btn:hover { background-color: #cbd5e1; /* slate-300 */ }
-        .filter-btn.active {
-            background-color: #2563eb; /* blue-600 */
-            color: white;
-        }
-        .progress-bar { width: 100%; background-color: #e2e8f0; border-radius: 8px; overflow: hidden; padding: 2px; }
-        .progress-bar-inner {
-            height: 10px; width: 100%; border-radius: 6px; background-color: #3b82f6; /* blue-500 */
-            background-image: linear-gradient(45deg, rgba(255,255,255,.25) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.25) 50%, rgba(255,255,255,.25) 75%, transparent 75%, transparent);
-            background-size: 1rem 1rem; animation: progress-bar-stripes 1s linear infinite;
-        }
-        @keyframes progress-bar-stripes { from { background-position: 1rem 0; } to { background-position: 0 0; } }
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .fade-in { animation: fadeIn 0.5s ease-in-out forwards; } @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .card-style { background-color: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05); }
+        .modal-backdrop { background-color: rgba(0,0,0,0.5); } .slide-in-up { animation: slideInUp 0.3s ease-out; } @keyframes slideInUp { from { opacity: 0; transform: translateY(20px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .tab-btn { padding: 8px 16px; cursor: pointer; border-bottom: 3px solid transparent; color: #475569; font-weight: 600; transition: all 0.2s; } .tab-btn:hover { color: #0f172a; } .tab-btn.active { color: #2563eb; border-bottom-color: #2563eb; }
+        .filter-btn { background-color: #e2e8f0; color: #475569; padding: 6px 12px; border-radius: 9999px; font-weight: 500; transition: all 0.2s; } .filter-btn:hover { background-color: #cbd5e1; } .filter-btn.active { background-color: #2563eb; color: white; }
+        .progress-bar { width: 100%; background-color: #e2e8f0; border-radius: 8px; overflow: hidden; padding: 2px; } .progress-bar-inner { height: 10px; width: 100%; border-radius: 6px; background-color: #3b82f6; background-image: linear-gradient(45deg, rgba(255,255,255,.25) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.25) 50%, rgba(255,255,255,.25) 75%, transparent 75%, transparent); background-size: 1rem 1rem; animation: progress-bar-stripes 1s linear infinite; } @keyframes progress-bar-stripes { from { background-position: 1rem 0; } to { background-position: 0 0; } }
     </style>
 </head>
 <body class="bg-slate-100 text-slate-800">
@@ -66,90 +24,47 @@
     <div id="public-page" class="fade-in">
         <div class="container mx-auto p-4 md:p-8 max-w-4xl min-h-screen flex flex-col justify-center">
              <header class="text-center mb-12">
-                <div class="w-32 h-32 rounded-full mx-auto mb-4 bg-slate-200 flex items-center justify-center text-5xl font-bold text-slate-500">Minh</div>
+                <img src="https://drive.google.com/uc?id=1I5sJ9yGGKlrIFyjQMmLmRqETNSTfQwXM" alt="Ảnh chân dung Lâm Quốc Minh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
                 <h1 class="text-4xl font-bold text-slate-900">Lâm Quốc Minh</h1>
                 <p class="text-lg text-slate-500 mt-2">Sinh viên khoa Luật, Trường Đại học Kinh tế - Luật, ĐHQG-HCM</p>
             </header>
             <section class="mb-12">
                  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <a href="tel:0899012608" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 .7A2 2 0 0 1 22 16.92z"></path></svg>
-                        <span class="font-semibold text-slate-800">Điện thoại</span><p class="text-sm text-slate-500">0899012608</p>
-                    </a>
-                    <a href="mailto:minhlq23504b@st.uel.edu.vn" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <span class="font-semibold text-slate-800">Email</span><p class="text-sm text-slate-500 truncate">minhlq23504b@st.uel.edu.vn</p>
-                    </a>
-                    <a href="https://www.facebook.com/lamquocminh18" target="_blank" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                        <span class="font-semibold text-slate-800">Facebook</span><p class="text-sm text-slate-500">lamquocminh18</p>
-                    </a>
-                    <a href="https://www.instagram.com/minhlq_18/" target="_blank" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        <span class="font-semibold text-slate-800">Instagram</span><p class="text-sm text-slate-500">minhlq_18</p>
-                    </a>
+                    <a href="tel:0899012608" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 .7A2 2 0 0 1 22 16.92z"></path></svg> <span class="font-semibold text-slate-800">Điện thoại</span><p class="text-sm text-slate-500">0899012608</p> </a>
+                    <a href="mailto:minhlq23504b@st.uel.edu.vn" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <span class="font-semibold text-slate-800">Email</span><p class="text-sm text-slate-500 truncate">minhlq23504b@st.uel.edu.vn</p> </a>
+                    <a href="https://www.facebook.com/lamquocminh18" target="_blank" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg> <span class="font-semibold text-slate-800">Facebook</span><p class="text-sm text-slate-500">lamquocminh18</p> </a>
+                    <a href="https://www.instagram.com/minhlq_18/" target="_blank" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> <span class="font-semibold text-slate-800">Instagram</span><p class="text-sm text-slate-500">minhlq_18</p> </a>
                 </div>
             </section>
-             <section class="mb-12">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Hoạt động & Thành tích</h2>
-                <div class="card-style rounded-lg p-6 text-center"><p class="text-slate-500">Nội dung đang được hoàn thiện...</p></div>
-            </section>
-            <footer class="text-center mt-auto">
-                <button id="show-login-btn" class="text-blue-600 hover:text-blue-500 transition-colors">Đăng nhập quản trị</button>
-            </footer>
+             <section class="mb-12"> <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Hoạt động & Thành tích</h2> <div class="card-style rounded-lg p-6 text-center"><p class="text-slate-500">Nội dung đang được hoàn thiện...</p></div> </section>
+            <footer class="text-center mt-auto"> <button id="show-login-btn" class="text-blue-600 hover:text-blue-500 transition-colors">Đăng nhập quản trị</button> </footer>
         </div>
     </div>
-
     <!-- Login Modal -->
     <div id="login-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
         <div class="fixed inset-0 modal-backdrop" id="login-modal-backdrop"></div>
         <div class="card-style rounded-lg p-8 w-full max-w-sm z-10 slide-in-up">
             <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Đăng nhập Quản trị</h2>
             <form id="login-form">
-                <div class="mb-4">
-                    <label for="username" class="block text-sm font-medium text-slate-600 mb-1">Tài khoản</label>
-                    <input type="text" id="username" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2 text-slate-800" required>
-                </div>
-                <div class="mb-6">
-                    <label for="password" class="block text-sm font-medium text-slate-600 mb-1">Mật khẩu</label>
-                    <input type="password" id="password" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2 text-slate-800" required>
-                </div>
+                <div class="mb-4"> <label for="username" class="block text-sm font-medium text-slate-600 mb-1">Tài khoản</label> <input type="text" id="username" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2 text-slate-800" required> </div>
+                <div class="mb-6"> <label for="password" class="block text-sm font-medium text-slate-600 mb-1">Mật khẩu</label> <input type="password" id="password" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2 text-slate-800" required> </div>
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-lg">Đăng nhập</button>
                 <p id="login-error" class="text-red-500 text-sm mt-4 text-center h-5"></p>
             </form>
         </div>
     </div>
-
     <!-- Admin Dashboard (hidden by default) -->
     <div id="app-container" class="min-h-screen hidden bg-white">
          <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 sm:p-6 bg-white border-b border-slate-200 gap-4">
-            <div>
-                <h1 class="text-xl font-bold text-slate-800">Xin chào Lâm Quốc Minh, chúc bạn một ngày vui vẻ!</h1>
-                <p id="current-time" class="text-sm text-slate-500"></p>
-            </div>
+            <div> <h1 class="text-xl font-bold text-slate-800">Xin chào Lâm Quốc Minh, chúc bạn một ngày vui vẻ!</h1> <p id="current-time" class="text-sm text-slate-500"></p> </div>
             <button id="logout-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors text-sm w-full sm:w-auto">Đăng xuất</button>
         </header>
         <main class="p-4 sm:p-6 lg:p-8">
-            <div class="mb-6">
-                <nav class="flex space-x-2 sm:space-x-4 border-b border-slate-200">
-                    <button data-tab="cong-viec" class="tab-btn active">Công việc</button>
-                    <button data-tab="tai-lieu" class="tab-btn">Tài liệu Drive</button>
-                    <button data-tab="tai-chinh" class="tab-btn">Tài chính</button>
-                    <button data-tab="thanh-tich" class="tab-btn">Thành tích</button>
-                </nav>
-            </div>
-            
+            <div class="mb-6"> <nav class="flex space-x-2 sm:space-x-4 border-b border-slate-200"> <button data-tab="cong-viec" class="tab-btn active">Công việc</button> <button data-tab="tai-lieu" class="tab-btn">Tài liệu Drive</button> <button data-tab="tai-chinh" class="tab-btn">Tài chính</button> <button data-tab="thanh-tich" class="tab-btn">Thành tích</button> </nav> </div>
             <div id="tab-content">
                  <div id="cong-viec" class="tab-pane active">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-2xl font-bold text-slate-800">Quản lý công việc hàng ngày</h2>
-                        <button id="toggle-settings-btn" class="text-slate-500 hover:text-slate-800" title="Cài đặt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></button>
-                    </div>
-                    <div id="calendar-settings" class="card-style p-4 mb-6 hidden">
-                        <h3 class="font-semibold mb-2 text-slate-800">Cài đặt Google Calendar</h3>
-                        <p class="text-sm text-slate-500 mb-2">ID Lịch đã được đặt mặc định trong mã nguồn.</p>
-                        <input type="text" id="calendar-id-input" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2 text-slate-800" disabled>
-                    </div>
+                    <div class="flex justify-between items-center mb-4"> <h2 class="text-2xl font-bold text-slate-800">Quản lý công việc hàng ngày</h2> <button id="toggle-settings-btn" class="text-slate-500 hover:text-slate-800" title="Cài đặt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></button> </div>
+                    <div id="calendar-settings" class="card-style p-4 mb-6 hidden"> <h3 class="font-semibold mb-2 text-slate-800">Cài đặt Google Calendar</h3> <p class="text-sm text-slate-500 mb-2">ID Lịch đã được đặt mặc định.</p> <input type="text" id="calendar-id-input" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2 text-slate-800" disabled> </div>
                     <div class="card-style p-6 mb-6">
                         <form id="task-form" class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
                             <div class="md:col-span-4"><label class="block text-sm font-medium text-slate-600 mb-1">Việc cần làm</label><input type="text" id="task-text-input" class="w-full bg-slate-100 border-slate-300 rounded-md p-2" required></div>
@@ -163,16 +78,11 @@
                      <div class="mb-4 flex items-center gap-2"><span class="text-sm font-semibold text-slate-500">Xem theo:</span><div id="task-filters" class="flex gap-2"><button data-filter="all" class="filter-btn active">Tất cả</button><button data-filter="today" class="filter-btn">Hôm nay</button><button data-filter="week" class="filter-btn">Tuần này</button><button data-filter="month" class="filter-btn">Tháng này</button></div></div>
                     <div id="task-list" class="space-y-3"></div>
                 </div>
-                <div id="tai-lieu" class="tab-pane hidden">
-                     <div class="flex justify-between items-center mb-4"><h2 class="text-2xl font-bold">Tất cả tài liệu đính kèm</h2><button id="refresh-drive-list-btn" class="text-slate-500 hover:text-slate-800 p-2 rounded-md" title="Làm mới"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg></button></div>
-                    <div id="all-attachments-container" class="space-y-6"></div>
-                </div>
-                <div id="tai-chinh" class="tab-pane hidden"><h2 class="text-2xl font-bold">Quản lý tài chính...</h2></div>
-                <div id="thanh-tich" class="tab-pane hidden"><h2 class="text-2xl font-bold">Quản lý thành tích...</h2></div>
+                <div id="tai-lieu" class="tab-pane hidden"> <div class="flex justify-between items-center mb-4"><h2 class="text-2xl font-bold">Tất cả tài liệu đính kèm</h2><button id="refresh-drive-list-btn" class="text-slate-500 hover:text-slate-800 p-2 rounded-md" title="Làm mới"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg></button></div> <div id="all-attachments-container" class="space-y-6"></div> </div>
+                <div id="tai-chinh" class="tab-pane hidden"><h2 class="text-2xl font-bold">Quản lý tài chính...</h2></div> <div id="thanh-tich" class="tab-pane hidden"><h2 class="text-2xl font-bold">Quản lý thành tích...</h2></div>
             </div>
         </main>
     </div>
-
     <!-- Attachment Modal -->
     <div id="attachment-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
         <div class="fixed inset-0 modal-backdrop" id="attachment-modal-backdrop"></div>
@@ -182,19 +92,11 @@
             <div>
                 <input type="file" id="attachment-file-input" class="hidden">
                 <button id="add-attachment-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><span>Thêm tệp mới</span></button>
-                <div id="upload-progress-container" class="hidden text-center">
-                     <p class="text-sm text-slate-500 mb-2">Đang tải tệp lên, vui lòng chờ...</p>
-                     <div class="progress-bar"><div class="progress-bar-inner"></div></div>
-                </div>
+                <div id="upload-progress-container" class="hidden text-center"> <p class="text-sm text-slate-500 mb-2">Đang tải tệp lên, vui lòng chờ...</p> <div class="progress-bar"><div class="progress-bar-inner"></div></div> </div>
             </div>
         </div>
     </div>
-    <div id="confirm-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-4 hidden">
-        <div class="fixed inset-0 modal-backdrop"></div><div class="card-style rounded-lg p-6 w-full max-w-sm z-10 slide-in-up">
-            <h3 id="confirm-modal-title" class="text-lg font-bold mb-4">Xác nhận</h3><p id="confirm-modal-text" class="text-slate-600 mb-6">Bạn có chắc muốn thực hiện?</p>
-            <div class="flex justify-end gap-4"><button id="confirm-modal-cancel" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-2 px-4 rounded-lg">Hủy</button><button id="confirm-modal-ok" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">OK</button></div>
-        </div>
-    </div>
+    <div id="confirm-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-4 hidden"> <div class="fixed inset-0 modal-backdrop"></div><div class="card-style rounded-lg p-6 w-full max-w-sm z-10 slide-in-up"> <h3 id="confirm-modal-title" class="text-lg font-bold mb-4">Xác nhận</h3><p id="confirm-modal-text" class="text-slate-600 mb-6">Bạn có chắc muốn thực hiện?</p> <div class="flex justify-end gap-4"><button id="confirm-modal-cancel" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-2 px-4 rounded-lg">Hủy</button><button id="confirm-modal-ok" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">OK</button></div> </div> </div>
     <div id="notification-toast" class="fixed bottom-5 right-5 bg-green-500 text-white py-3 px-5 rounded-lg shadow-lg opacity-0 translate-y-4 transition-all duration-300"><p id="notification-text"></p></div>
 
     <script>
@@ -209,36 +111,27 @@
         const startClock = () => { const updateTime = () => { const now = new Date(); const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' }; currentTimeEl.textContent = now.toLocaleDateString('vi-VN', options); }; updateTime(); setInterval(updateTime, 1000); };
         const showNotification = (message, isError = false) => { notificationText.textContent = message; notificationToast.className = `fixed bottom-5 right-5 text-white py-3 px-5 rounded-lg shadow-lg transition-all duration-300 ${isError ? 'bg-red-500' : 'bg-green-500'}`; notificationToast.classList.remove('opacity-0', 'translate-y-4'); setTimeout(() => { notificationToast.classList.add('opacity-0', 'translate-y-4'); }, 3000); };
         const showConfirm = (title, text) => { return new Promise((resolve) => { confirmModalTitle.textContent = title; confirmModalText.textContent = text; confirmModal.classList.remove('hidden'); const close = (result) => { confirmModal.classList.add('hidden'); resolve(result); }; confirmModalOk.onclick = () => close(true); confirmModalCancel.onclick = () => close(false); confirmModalBackdrop.onclick = () => close(false); }); };
-        const saveStateToServer = () => google.script.run.saveUserData(JSON.stringify(appState));
-        const loadDataFromServer = () => { google.script.run.withSuccessHandler(dataString => { if (dataString) { const loadedState = JSON.parse(dataString); appState.tasks = loadedState.tasks || []; appState.calendarId = loadedState.calendarId || ""; calendarIdInput.value = appState.calendarId; renderTasks(); } }).getUserData(); };
-        const renderTasks = () => {
-            taskList.innerHTML = ''; let tasksToRender = appState.tasks; const now = new Date(); const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()); const todayEnd = new Date(todayStart); todayEnd.setHours(23, 59, 59, 999);
-            if (currentFilter !== 'all') { tasksToRender = appState.tasks.filter(task => { const taskStart = new Date(task.startDateTime); if (isNaN(taskStart.getTime())) return false; if (currentFilter === 'today') { return taskStart >= todayStart && taskStart <= todayEnd; } if (currentFilter === 'week') { const dayOfWeek = now.getDay() === 0 ? 6 : now.getDay() - 1; const startOfWeek = new Date(todayStart.setDate(todayStart.getDate() - dayOfWeek)); const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(endOfWeek.getDate() + 6); endOfWeek.setHours(23, 59, 59, 999); return taskStart >= startOfWeek && taskStart <= endOfWeek; } if (currentFilter === 'month') { return taskStart.getMonth() === now.getMonth() && taskStart.getFullYear() === now.getFullYear(); } return true; }); }
-            tasksToRender.sort((a, b) => new Date(a.startDateTime) - new Date(b.startDateTime));
-            const groupedTasks = tasksToRender.reduce((acc, task) => { const date = new Date(task.startDateTime).toLocaleDateString('vi-VN', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' }); if (!acc[date]) acc[date] = []; acc[date].push(task); return acc; }, {});
-            if (Object.keys(groupedTasks).length === 0) { taskList.innerHTML = `<div class="text-center text-slate-500 py-8"><p>Không có công việc nào cho mục này.</p></div>`; return; }
-            for (const date in groupedTasks) {
-                const dateHeader = document.createElement('h3'); dateHeader.className = 'text-md font-semibold text-slate-600 mb-2 mt-4 first:mt-0'; dateHeader.textContent = date; taskList.appendChild(dateHeader);
-                groupedTasks[date].forEach(task => {
-                    const priorityClasses = { high: 'text-red-500', medium: 'text-amber-500', low: 'text-blue-500' };
-                    const categoryClasses = { doanhoi: 'bg-blue-100 text-blue-800', nghiencuu: 'bg-indigo-100 text-indigo-800', hoctap: 'bg-green-100 text-green-800', ngoaingu: 'bg-teal-100 text-teal-800', linhtinh: 'bg-slate-200 text-slate-800' };
-                    const taskEl = document.createElement('div'); taskEl.className = `task-item card-style rounded-lg p-3 flex items-center gap-4 transition-opacity ${task.completed ? 'opacity-50' : ''}`;
-                    taskEl.innerHTML = `<input type="checkbox" data-id="${task.id}" class="task-checkbox h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer flex-shrink-0" ${task.completed ? 'checked' : ''}><div class="flex-grow"><p class="font-medium text-slate-800 ${task.completed ? 'line-through' : ''}">${task.text}</p><p class="text-sm text-slate-500">${new Date(task.startDateTime).toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'})} - ${new Date(task.endDateTime).toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'})}</p></div><div class="flex items-center gap-2 flex-shrink-0"><span class="px-2 py-0.5 rounded-full text-xs font-semibold ${categoryClasses[task.category]}">${categoryInput.querySelector(`option[value="${task.category}"]`).textContent}</span><span class="font-bold text-sm ${priorityClasses[task.priority]}">${priorityInput.querySelector(`option[value="${task.priority}"]`).textContent}</span></div><div class="flex items-center gap-1 text-slate-500"><button title="Lịch" data-id="${task.id}" class="add-to-calendar-btn hover:text-blue-600 p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-plus"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="9" y1="19" x2="15" y2="19"/></svg></button><button title="Đính kèm" data-id="${task.id}" data-name="${task.text}" class="open-attachments-btn hover:text-blue-600 p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.59a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg></button><button title="Xóa" data-id="${task.id}" class="delete-task-btn hover:text-red-600 text-2xl font-bold p-1">&times;</button></div>`;
-                    taskList.appendChild(taskEl);
-                });
-            }
-        };
+        
+        // --- CÁC HÀM GIAO TIẾP VỚI VERCEL API ---
+        const loadDataFromServer = async () => { try { const response = await fetch('/api/data'); const loadedState = await response.json(); if (response.ok) { appState.tasks = loadedState.tasks || []; appState.calendarId = loadedState.calendarId || ""; calendarIdInput.value = appState.calendarId; renderTasks(); } else { throw new Error(loadedState.error); } } catch (error) { console.error("Không thể tải dữ liệu:", error); showNotification("Lỗi: Không thể tải dữ liệu.", true); }};
+        const saveStateToServer = async () => { try { await fetch('/api/data', { method: 'POST', headers: { 'Content-Type': 'application/json', }, body: JSON.stringify(appState), }); } catch (error) { console.error("Lỗi khi lưu dữ liệu:", error); showNotification("Không thể lưu thay đổi.", true); }};
+        const handleAddToCalendar = async (btn, taskId) => { const task = appState.tasks.find(t => t.id === taskId); const calendarId = appState.calendarId.trim(); if (!calendarId || !task) return; btn.disabled = true; try { const response = await fetch('/api/calendar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ calendarId, title: task.text, startTime: task.startDateTime, endTime: task.endDateTime }) }); const result = await response.json(); showNotification(result.message, !response.ok); } catch (error) { showNotification("Lỗi kết nối máy chủ.", true); } finally { btn.disabled = false; }};
+        const renderAttachments = async (taskId) => { attachmentList.innerHTML = '<p class="text-slate-500">Đang tải...</p>'; try { const response = await fetch(`/api/drive?action=list&taskId=${taskId}`); const files = await response.json(); attachmentList.innerHTML = files.length === 0 ? '<p class="text-slate-500">Chưa có tệp đính kèm nào.</p>' : files.map(file => `<div class="flex justify-between items-center bg-slate-100 p-2 rounded"><a href="${file.url}" target="_blank" class="text-blue-600 hover:underline truncate pr-2">${file.name}</a><button data-id="${file.id}" class="delete-attachment-btn text-slate-400 hover:text-red-500 text-2xl flex-shrink-0">&times;</button></div>`).join(''); } catch (error) { attachmentList.innerHTML = '<p class="text-red-500">Lỗi khi tải tệp.</p>'; }};
+        const handleAddAttachment = () => { const file = attachmentFileInput.files[0]; if (!file) return; addAttachmentBtn.classList.add('hidden'); uploadProgressContainer.classList.remove('hidden'); const reader = new FileReader(); reader.onload = async (e) => { const fileData = { fileName: file.name, mimeType: file.type, data: e.target.result.split(',')[1] }; try { const response = await fetch('/api/drive', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'upload', taskId: currentTaskIdForAttachment, fileData }) }); const result = await response.json(); showNotification(result.message, !response.ok); if (response.ok) renderAttachments(currentTaskIdForAttachment); } catch (error) { showNotification("Lỗi kết nối khi tải tệp.", true); } finally { addAttachmentBtn.classList.remove('hidden'); uploadProgressContainer.classList.add('hidden'); attachmentFileInput.value = ''; } }; reader.readAsDataURL(file); };
+        const handleDeleteAttachment = async (fileId) => { if (!await showConfirm('Xóa tệp?', 'Bạn có chắc muốn xóa tệp đính kèm này?')) return; try { const response = await fetch('/api/drive', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'delete', fileId }) }); const result = await response.json(); showNotification(result.message, !response.ok); if(response.ok) renderAttachments(currentTaskIdForAttachment); } catch(error) { showNotification('Lỗi kết nối khi xóa tệp.', true); }};
+        const renderAllAttachments = async () => { allAttachmentsContainer.innerHTML = `<p class="text-slate-500">Đang tải...</p>`; try { const response = await fetch('/api/drive?action=listAll'); const allAttachments = await response.json(); if (allAttachments.length === 0) { allAttachmentsContainer.innerHTML = `<p class="text-slate-500 text-center py-8">Chưa có tài liệu nào.</p>`; return; } let html = ''; allAttachments.forEach(taskGroup => { const task = appState.tasks.find(t => String(t.id) === taskGroup.taskId); if (task) { html += `<div class="card-style p-4 rounded-lg"><h3 class="font-semibold text-slate-800 mb-2">Công việc: <span class="font-normal text-blue-600">${task.text}</span></h3><div class="space-y-2">`; taskGroup.files.forEach(file => { html += `<div class="flex justify-between items-center bg-slate-100 p-2 rounded"><a href="${file.url}" target="_blank" class="text-slate-600 hover:text-blue-600 truncate pr-2">${file.name}</a></div>`; }); html += `</div></div>`; } }); allAttachmentsContainer.innerHTML = html; } catch (error) { allAttachmentsContainer.innerHTML = `<p class="text-red-500">Lỗi: Không thể tải danh sách tài liệu.</p>`; } };
+        const deleteTaskAttachmentFolder = async (taskId) => { try { await fetch('/api/drive', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'deleteFolder', taskId }) }); } catch(error) { console.error('Lỗi khi xóa thư mục:', error); } };
+
+        // --- CÁC HÀM CŨ VẪN GIỮ NGUYÊN ---
+        const renderTasks = () => { taskList.innerHTML = ''; let tasksToRender = appState.tasks; const now = new Date(); const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()); const todayEnd = new Date(todayStart); todayEnd.setHours(23, 59, 59, 999); if (currentFilter !== 'all') { tasksToRender = appState.tasks.filter(task => { const taskStart = new Date(task.startDateTime); if (isNaN(taskStart.getTime())) return false; if (currentFilter === 'today') { return taskStart >= todayStart && taskStart <= todayEnd; } if (currentFilter === 'week') { const dayOfWeek = now.getDay() === 0 ? 6 : now.getDay() - 1; const startOfWeek = new Date(new Date(now).setDate(now.getDate() - dayOfWeek)); const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(endOfWeek.getDate() + 6); endOfWeek.setHours(23, 59, 59, 999); return new Date(task.startDateTime) >= startOfWeek && new Date(task.startDateTime) <= endOfWeek; } if (currentFilter === 'month') { return new Date(task.startDateTime).getMonth() === now.getMonth() && new Date(task.startDateTime).getFullYear() === now.getFullYear(); } return true; }); } tasksToRender.sort((a, b) => new Date(a.startDateTime) - new Date(b.startDateTime)); const groupedTasks = tasksToRender.reduce((acc, task) => { const date = new Date(task.startDateTime).toLocaleDateString('vi-VN', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' }); if (!acc[date]) acc[date] = []; acc[date].push(task); return acc; }, {}); if (Object.keys(groupedTasks).length === 0) { taskList.innerHTML = `<div class="text-center text-slate-500 py-8"><p>Không có công việc nào cho mục này.</p></div>`; return; } for (const date in groupedTasks) { const dateHeader = document.createElement('h3'); dateHeader.className = 'text-md font-semibold text-slate-600 mb-2 mt-4 first:mt-0'; dateHeader.textContent = date; taskList.appendChild(dateHeader); groupedTasks[date].forEach(task => { const priorityClasses = { high: 'text-red-500', medium: 'text-amber-500', low: 'text-blue-500' }; const categoryClasses = { doanhoi: 'bg-blue-100 text-blue-800', nghiencuu: 'bg-indigo-100 text-indigo-800', hoctap: 'bg-green-100 text-green-800', ngoaingu: 'bg-teal-100 text-teal-800', linhtinh: 'bg-slate-200 text-slate-800' }; const taskEl = document.createElement('div'); taskEl.className = `task-item card-style rounded-lg p-3 flex items-center gap-4 transition-opacity ${task.completed ? 'opacity-50' : ''}`; taskEl.innerHTML = `<input type="checkbox" data-id="${task.id}" class="task-checkbox h-5 w-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer flex-shrink-0" ${task.completed ? 'checked' : ''}><div class="flex-grow"><p class="font-medium text-slate-800 ${task.completed ? 'line-through' : ''}">${task.text}</p><p class="text-sm text-slate-500">${new Date(task.startDateTime).toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'})} - ${new Date(task.endDateTime).toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'})}</p></div><div class="flex items-center gap-2 flex-shrink-0"><span class="px-2 py-0.5 rounded-full text-xs font-semibold ${categoryClasses[task.category]}">${categoryInput.querySelector(`option[value="${task.category}"]`).textContent}</span><span class="font-bold text-sm ${priorityClasses[task.priority]}">${priorityInput.querySelector(`option[value="${task.priority}"]`).textContent}</span></div><div class="flex items-center gap-1 text-slate-500"><button title="Lịch" data-id="${task.id}" class="add-to-calendar-btn hover:text-blue-600 p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-plus"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="9" y1="19" x2="15" y2="19"/></svg></button><button title="Đính kèm" data-id="${task.id}" data-name="${task.text}" class="open-attachments-btn hover:text-blue-600 p-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.59a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg></button><button title="Xóa" data-id="${task.id}" class="delete-task-btn hover:text-red-600 text-2xl font-bold p-1">&times;</button></div>`; taskList.appendChild(taskEl); }); }};
         const handleAddTask = (e) => { e.preventDefault(); const start = new Date(startDateTimeInput.value); const end = new Date(endDateTimeInput.value); if(start >= end) { showNotification("Thời gian kết thúc phải sau thời gian bắt đầu.", true); return; } const newTask = { id: Date.now(), text: taskTextInput.value, category: categoryInput.value, priority: priorityInput.value, startDateTime: startDateTimeInput.value, endDateTime: endDateTimeInput.value, completed: false }; appState.tasks.push(newTask); saveStateToServer(); renderTasks(); taskForm.reset(); showNotification("Đã thêm công việc thành công!"); };
-        const handleDeleteTask = async (taskId) => { const confirmed = await showConfirm('Xóa công việc?', 'Bạn có chắc muốn xóa công việc này? Các tệp đính kèm cũng sẽ bị xóa.'); if (confirmed) { appState.tasks = appState.tasks.filter(t => t.id !== taskId); saveStateToServer(); renderTasks(); google.script.run.deleteTaskAttachmentFolder(String(taskId)); showNotification("Đã xóa công việc."); } };
+        const handleDeleteTask = async (taskId) => { const confirmed = await showConfirm('Xóa công việc?', 'Bạn có chắc muốn xóa công việc này? Các tệp đính kèm cũng sẽ bị xóa.'); if (confirmed) { appState.tasks = appState.tasks.filter(t => t.id !== taskId); saveStateToServer(); deleteTaskAttachmentFolder(taskId); renderTasks(); showNotification("Đã xóa công việc."); } };
         const handleToggleTask = (taskId) => { const task = appState.tasks.find(t => t.id === taskId); if (task) { task.completed = !task.completed; saveStateToServer(); renderTasks(); } };
-        const handleAddToCalendar = (btn, taskId) => { const task = appState.tasks.find(t => t.id === taskId); const calendarId = appState.calendarId.trim(); if (!calendarId) { showNotification("Chưa có ID Lịch.", true); return; } if (!task) return; btn.disabled = true; google.script.run.withSuccessHandler(response => showNotification(response)).withFailureHandler(err => showNotification(err.message, true)).withFinally(() => btn.disabled = false).createCalendarEvent(calendarId, task.text, task.startDateTime, task.endDateTime); };
         const openAttachmentModal = (taskId, taskName) => { currentTaskIdForAttachment = taskId; modalTaskName.textContent = taskName; attachmentModal.classList.remove('hidden'); renderAttachments(taskId); };
         const closeAttachmentModal = () => { attachmentModal.classList.add('hidden'); addAttachmentBtn.classList.remove('hidden'); uploadProgressContainer.classList.add('hidden'); };
-        const renderAttachments = (taskId) => { attachmentList.innerHTML = '<p class="text-slate-500">Đang tải...</p>'; google.script.run.withSuccessHandler(filesString => { const files = JSON.parse(filesString); attachmentList.innerHTML = files.length === 0 ? '<p class="text-slate-500">Chưa có tệp đính kèm nào.</p>' : files.map(file => `<div class="flex justify-between items-center bg-slate-100 p-2 rounded"><a href="${file.url}" target="_blank" class="text-blue-600 hover:underline truncate pr-2">${file.name}</a><button data-id="${file.id}" class="delete-attachment-btn text-slate-400 hover:text-red-500 text-2xl flex-shrink-0">&times;</button></div>`).join(''); }).getFilesForTask(String(taskId)); };
-        const handleAddAttachment = () => { const file = attachmentFileInput.files[0]; if (!file) return; addAttachmentBtn.classList.add('hidden'); uploadProgressContainer.classList.remove('hidden'); const reader = new FileReader(); reader.onload = e => { const fileData = { fileName: file.name, mimeType: file.type, data: e.target.result.split(',')[1] }; google.script.run.withSuccessHandler((msg) => { showNotification(msg); renderAttachments(currentTaskIdForAttachment); }).withFailureHandler(err => showNotification(err.message, true)).withFinally(() => { addAttachmentBtn.classList.remove('hidden'); uploadProgressContainer.classList.add('hidden'); attachmentFileInput.value = ''; }).uploadFileForTask(fileData, String(currentTaskIdForAttachment)); }; reader.readAsDataURL(file); };
-        const handleDeleteAttachment = async (fileId) => { const confirmed = await showConfirm('Xóa tệp?', 'Bạn có chắc muốn xóa tệp đính kèm này?'); if (confirmed) { google.script.run.withSuccessHandler((msg) => { showNotification(msg); renderAttachments(currentTaskIdForAttachment); }).withFailureHandler(err => showNotification(err.message, true)).deleteDriveFile(fileId); }};
-        const renderAllAttachments = () => { allAttachmentsContainer.innerHTML = `<p class="text-slate-500">Đang tải...</p>`; google.script.run.withSuccessHandler(dataString => { const allAttachments = JSON.parse(dataString); if (allAttachments.length === 0) { allAttachmentsContainer.innerHTML = `<p class="text-slate-500 text-center py-8">Chưa có tài liệu nào.</p>`; return; } let html = ''; allAttachments.forEach(taskGroup => { const task = appState.tasks.find(t => String(t.id) === taskGroup.taskId); if (task) { html += `<div class="card-style p-4 rounded-lg"><h3 class="font-semibold text-slate-800 mb-2">Công việc: <span class="font-normal text-blue-600">${task.text}</span></h3><div class="space-y-2">`; taskGroup.files.forEach(file => { html += `<div class="flex justify-between items-center bg-slate-100 p-2 rounded"><a href="${file.url}" target="_blank" class="text-slate-600 hover:text-blue-600 truncate pr-2">${file.name}</a></div>`; }); html += `</div></div>`; } }); allAttachmentsContainer.innerHTML = html; }).withFailureHandler(err => { allAttachmentsContainer.innerHTML = `<p class="text-red-500">Lỗi: ${err.message}</p>`; }).listAllTaskAttachments(); };
         const switchTab = (e) => { const tabId = e.currentTarget.dataset.tab; tabBtns.forEach(btn => btn.classList.remove('active')); tabPanes.forEach(pane => pane.classList.add('hidden')); e.currentTarget.classList.add('active'); document.getElementById(tabId).classList.remove('hidden'); if (tabId === 'tai-lieu' && !driveTabLoaded) { renderAllAttachments(); driveTabLoaded = true; } };
+        
+        // EVENT LISTENERS
         showLoginBtn.addEventListener('click', showLoginModal); loginModalBackdrop.addEventListener('click', hideLoginModal); loginForm.addEventListener('submit', handleLogin); logoutBtn.addEventListener('click', handleLogout); document.body.addEventListener('click', e => { const deleteBtn = e.target.closest('.delete-task-btn'); const attachBtn = e.target.closest('.open-attachments-btn'); const calendarBtn = e.target.closest('.add-to-calendar-btn'); if (deleteBtn) handleDeleteTask(parseInt(deleteBtn.dataset.id)); if (attachBtn) openAttachmentModal(attachBtn.dataset.id, attachBtn.dataset.name); if (calendarBtn) handleAddToCalendar(calendarBtn, parseInt(calendarBtn.dataset.id)); }); document.body.addEventListener('change', e => { if (e.target.closest('.task-checkbox')) handleToggleTask(parseInt(e.target.closest('.task-checkbox').dataset.id)); }); taskFilters.addEventListener('click', e => { if (e.target.tagName === 'BUTTON') { taskFilters.querySelector('.active').classList.remove('active'); e.target.classList.add('active'); currentFilter = e.target.dataset.filter; renderTasks(); }});
         tabBtns.forEach(btn => btn.addEventListener('click', switchTab)); taskForm.addEventListener('submit', handleAddTask); toggleSettingsBtn.addEventListener('click', () => calendarSettings.classList.toggle('hidden')); closeAttachmentModalBtn.addEventListener('click', closeAttachmentModal); attachmentModalBackdrop.addEventListener('click', closeAttachmentModal); addAttachmentBtn.addEventListener('click', () => attachmentFileInput.click()); attachmentFileInput.addEventListener('change', handleAddAttachment); attachmentList.addEventListener('click', e => { if (e.target.closest('.delete-attachment-btn')) { handleDeleteAttachment(e.target.closest('.delete-attachment-btn').dataset.id); }}); refreshDriveListBtn.addEventListener('click', renderAllAttachments);
         checkLoginState();
