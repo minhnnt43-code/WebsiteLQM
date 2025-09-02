@@ -1,16 +1,7 @@
 {
-  "name": "my-personal-website",
+  "name": "lam-quoc-minh-website",
   "version": "1.0.0",
-  "description": "Personal website for Lam Quoc Minh",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@vercel/kv": "^0.2.3",
-    "googleapis": "^126.0.1"
-  }
+  "description": "My personal website.",
+  "author": "Lam Quoc Minh",
+  "license": "ISC"
 }
