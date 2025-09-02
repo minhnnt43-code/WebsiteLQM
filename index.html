@@ -1,170 +1,198 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <base target="_top">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Cá Nhân - Lâm Quốc Minh</title>
+    <title>Lâm Quốc Minh - Trang Cá Nhân</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; scroll-behavior: smooth; }
-        .card-style { background-color: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05); }
-        .filter-btn { background-color: #e2e8f0; color: #475569; padding: 6px 12px; border-radius: 9999px; font-weight: 500; }
-        .filter-btn.active { background-color: #2563eb; color: white; }
-        .tab-btn { padding: 8px 16px; cursor: pointer; border-bottom: 3px solid transparent; color: #475569; font-weight: 600; transition: all 0.2s; }
-        .tab-btn.active { color: #2563eb; border-bottom-color: #2563eb; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .section-title { font-weight: 800; font-size: 2.25rem; /* text-4xl */ color: #1e3a8a; /* blue-900 */ }
+        .nav-link { transition: color 0.2s; }
+        .nav-link:hover { color: #2563eb; /* blue-600 */ }
+        .social-link:hover { transform: scale(1.1); }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800">
+<body class="bg-slate-50 text-slate-700">
 
-    <div id="public-page" style="display: none;">
-        <div class="container mx-auto p-4 md:p-8 max-w-4xl min-h-screen flex flex-col justify-center">
-             <header class="text-center mb-12">
-                <img src="https://drive.google.com/uc?id=1I5sJ9yGGKlrIFyjQMmLmRqETNSTfQwXM" alt="Ảnh chân dung Lâm Quốc Minh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-white shadow-lg">
-                <h1 class="text-4xl font-bold text-slate-900">Lâm Quốc Minh</h1>
-                <p class="text-lg text-slate-500 mt-2">Sinh viên khoa Luật, Trường Đại học Kinh tế - Luật, ĐHQG-HCM</p>
-            </header>
-            <section class="mb-12">
-                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <a href="tel:0899012608" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 .7A2 2 0 0 1 22 16.92z"></path></svg> <span class="font-semibold text-slate-800">Điện thoại</span><p class="text-sm text-slate-500">0899012608</p> </a>
-                    <a href="mailto:minhlq23504b@st.uel.edu.vn" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <span class="font-semibold text-slate-800">Email</span><p class="text-sm text-slate-500 truncate">minhlq23504b@st.uel.edu.vn</p> </a>
-                    <a href="https://www.facebook.com/lamquocminh18" target="_blank" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg> <span class="font-semibold text-slate-800">Facebook</span><p class="text-sm text-slate-500">lamquocminh18</p> </a>
-                    <a href="https://www.instagram.com/minhlq_18/" target="_blank" class="card-style rounded-lg p-4 hover:bg-slate-50 transition-all duration-300"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-blue-600"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> <span class="font-semibold text-slate-800">Instagram</span><p class="text-sm text-slate-500">minhlq_18</p> </a>
-                </div>
-            </section>
-            
-            <section id="achievements-public" class="mb-12">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Hoạt động & Thành tích</h2>
-                <div id="achievements-list-public" class="space-y-8">
-                    <!-- Danh sách thành tích sẽ được tự động chèn vào đây -->
-                </div>
-            </section>
-            
-            <footer class="text-center mt-auto"> <button id="show-login-btn" class="text-blue-600 hover:text-blue-500 transition-colors">Đăng nhập quản trị</button> </footer>
+    <!-- HEADER - THANH ĐIỀU HƯỚNG -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-blue-800">Lâm Quốc Minh</a>
+            <nav class="hidden md:flex space-x-8 text-slate-600 font-semibold">
+                <a href="#about" class="nav-link">Thông tin cá nhân</a>
+                <a href="#achievements" class="nav-link">Đã đạt được</a>
+                <a href="#contact" class="nav-link">Lời tâm sự</a>
+                <a href="#moments" class="nav-link">Khoảnh khắc</a>
+                <a href="#quotes" class="nav-link">Quotes</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
         </div>
-    </div>
-    
-    <div id="login-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
-        <div class="fixed inset-0 bg-black/50" id="login-modal-backdrop"></div>
-        <div class="card-style rounded-lg p-8 w-full max-w-sm z-10">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Đăng nhập Quản trị</h2>
-            <form id="login-form">
-                <div class="mb-4"> <label for="username" class="block text-sm font-medium text-slate-600 mb-1">Tài khoản</label> <input type="text" id="username" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2 text-slate-800" required> </div>
-                <div class="mb-6"> <label for="password" class="block text-sm font-medium text-slate-600 mb-1">Mật khẩu</label> <input type="password" id="password" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2 text-slate-800" required> </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-lg">Đăng nhập</button>
-                <p id="login-error" class="text-red-500 text-sm mt-4 text-center h-5"></p>
-            </form>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-slate-600 font-semibold">Thông tin cá nhân</a>
+            <a href="#achievements" class="block py-2 text-slate-600 font-semibold">Đã đạt được</a>
+            <a href="#contact" class="block py-2 text-slate-600 font-semibold">Lời tâm sự</a>
+            <a href="#moments" class="block py-2 text-slate-600 font-semibold">Khoảnh khắc</a>
+            <a href="#quotes" class="block py-2 text-slate-600 font-semibold">Quotes</a>
         </div>
-    </div>
+    </header>
 
-    <div id="app-container" class="min-h-screen hidden bg-white">
-         <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 sm:p-6 bg-white border-b border-slate-200 gap-4">
-            <div> <h1 class="text-xl font-bold text-slate-800">Xin chào Lâm Quốc Minh, chúc bạn một ngày vui vẻ!</h1> <p id="current-time" class="text-sm text-slate-500"></p> </div>
-            <button id="logout-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg text-sm w-full sm:w-auto">Đăng xuất</button>
-        </header>
-        <main class="p-4 sm:p-6 lg:p-8">
-            <div class="mb-6">
-                <nav class="flex space-x-2 sm:space-x-4 border-b border-slate-200">
-                    <button data-tab="cong-viec" class="tab-btn active">Công việc</button>
-                    <button data-tab="thanh-tich" class="tab-btn">Thành tích</button>
-                </nav>
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- SECTION 1: THÔNG TIN CÁ NHÂN -->
+        <section id="about" class="min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left">
+            <img src="https://drive.google.com/uc?id=1I5sJ9yGGKlrIFyjQMmLmRqETNSTfQwXM" alt="Ảnh Lâm Quốc Minh" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-blue-900">Lâm Quốc Minh</h1>
+                <p class="mt-4 text-lg md:text-xl text-slate-600">Sinh viên khoa Luật, Trường Đại học Kinh tế - Luật, ĐHQG-HCM</p>
+                <p class="mt-4 max-w-2xl text-slate-500">
+                    Xin chào, mình là sinh viên của Trường Đại học Kinh tế - Luật, ĐHQG-HCM hiện tại mình đang học Luật Tài chính Ngân hàng
+                </p>
+                <div class="mt-6 flex justify-center md:justify-start space-x-6">
+                    <a href="https://www.facebook.com/lamquocminh18" target="_blank" class="social-link transition-transform"><svg class="w-8 h-8 text-slate-500 hover:text-blue-700" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/></svg></a>
+                    <a href="https://www.instagram.com/minhlq_18/" target="_blank" class="social-link transition-transform"><svg class="w-8 h-8 text-slate-500 hover:text-blue-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44c0-.795-.645-1.44-1.441-1.44z"/></svg></a>
+                    <a href="mailto:minhlq23504b@st.uel.edu.vn" class="social-link transition-transform"><svg class="w-8 h-8 text-slate-500 hover:text-blue-700" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg></a>
+                </div>
             </div>
-            <div id="tab-content">
-                <div id="cong-viec-content" class="tab-pane">
-                    <!-- Khu vực công việc giữ nguyên -->
-                </div>
-                
-                <div id="thanh-tich-content" class="tab-pane hidden">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div class="card-style p-6 rounded-lg">
-                            <h2 class="text-2xl font-bold text-slate-800">Thêm Thành tích Mới</h2>
-                            <form id="achievement-form" class="mt-4 space-y-4">
-                                <div><label for="achievement-title" class="block text-sm font-medium text-slate-600 mb-1">Tiêu đề thành tích</label><input type="text" id="achievement-title" class="w-full bg-slate-100 border-slate-300 rounded-md p-2" required></div>
-                                <div><label for="achievement-description" class="block text-sm font-medium text-slate-600 mb-1">Mô tả</label><textarea id="achievement-description" rows="4" class="w-full bg-slate-100 border-slate-300 rounded-md p-2" required></textarea></div>
-                                <!-- ================== KHU VỰC ĐÃ NÂNG CẤP ================== -->
-                                <div>
-                                    <label for="achievement-image-url" class="block text-sm font-medium text-slate-600 mb-1">Link Chia sẻ Ảnh Google Drive</label>
-                                    <input type="url" id="achievement-image-url" class="w-full bg-slate-100 border-slate-300 rounded-md p-2 font-mono text-sm" placeholder="https://drive.google.com/file/d/..." required>
-                                    <p class="text-xs text-slate-500 mt-1">
-                                        Hướng dẫn: Nhấp chuột phải vào ảnh trên Drive -> Chia sẻ -> Sao chép đường liên kết và dán vào đây.
-                                    </p>
-                                </div>
-                                <!-- ========================================================= -->
-                                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-lg">Thêm thành tích</button>
-                            </form>
-                        </div>
-                        <div class="card-style p-6 rounded-lg">
-                            <h2 class="text-2xl font-bold text-slate-800">Danh sách Thành tích</h2>
-                            <div id="achievements-list-admin" class="mt-4 space-y-4 max-h-[60vh] overflow-y-auto pr-2"></div>
-                        </div>
+        </section>
+
+        <!-- SECTION 2: NHỮNG GÌ TÔI ĐÃ ĐẠT ĐƯỢC -->
+        <section id="achievements" class="py-20">
+            <h2 class="section-title text-center mb-12">Những gì tôi đã đạt được</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mẫu 1 thành tích. Copy toàn bộ khối div này để thêm mới -->
+                <div class="card-style rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <img src="https://drive.google.com/uc?id=12-wT41fQ47KypmgXKvSAi7PjA8MvWnUv" alt="Thành tích 1" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800">Chiến sĩ hoàn thành xuất sắc nhiệm vụ</h3>
+                        <p class="mt-2 text-slate-500">Được khen thưởng vì đã hoàn thành xuất sắc nhiệm vụ trong chiến dịch tình nguyện Mùa Hè Xanh 2025.</p>
                     </div>
                 </div>
-
+                <!-- Kết thúc mẫu 1 -->
+                 <!-- Mẫu 2 thành tích. -->
+                <div class="card-style rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <img src="https://drive.google.com/uc?id=1eM9Y-gNusx5aT6MvMv4-0aY_iO7bIq_W" alt="Thành tích 2" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800">Học bổng Khuyến khích học tập</h3>
+                        <p class="mt-2 text-slate-500">Đạt thành tích tốt và nhận học bổng từ nhà trường cho những nỗ lực trong học tập.</p>
+                    </div>
+                </div>
+                <!-- Kết thúc mẫu 2 -->
+                <!-- Mẫu 3 thành tích trống để bạn tự điền -->
+                <div class="card-style rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <div class="w-full h-56 bg-slate-200 flex items-center justify-center">
+                        <p class="text-slate-400">Thay thế bằng ảnh</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800">Tiêu đề thành tích của bạn</h3>
+                        <p class="mt-2 text-slate-500">Mô tả ngắn gọn và hấp dẫn về thành tích này.</p>
+                    </div>
+                </div>
+                <!-- Kết thúc mẫu 3 -->
             </div>
-        </main>
-    </div>
+        </section>
+
+        <!-- SECTION 3: LỜI TÂM SỰ (Biểu mẫu liên hệ) -->
+        <section id="contact" class="py-20 bg-white -mx-6 px-6 rounded-lg">
+            <h2 class="section-title text-center mb-4">Lời tâm sự chia sẻ</h2>
+            <p class="text-center max-w-2xl mx-auto text-slate-500 mb-12">
+                Nếu bạn có lời nhắn, câu hỏi hay chỉ đơn giản là muốn kết nối, đừng ngần ngại để lại lời tâm sự ở đây nhé.
+            </p>
+            <form id="contact-form" action="https://formspree.io/f/mjkeende" method="POST" class="max-w-xl mx-auto">
+                <div id="form-feedback" class="mb-4 text-center"></div>
+                <div class="mb-4">
+                    <label for="email" class="block mb-2 font-semibold text-slate-700">Email của bạn</label>
+                    <input type="email" name="email" id="email" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block mb-2 font-semibold text-slate-700">Lời tâm sự</label>
+                    <textarea name="message" id="message" rows="5" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-all">Gửi lời nhắn</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- SECTION 4: NHỮNG KHOẢNH KHẮC ĐÁNG NHỚ -->
+        <section id="moments" class="py-20">
+            <h2 class="section-title text-center mb-12">Những khoảnh khắc đáng nhớ</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Bố cục lưới ảnh (gallery). Bạn chỉ cần thay thế ID ảnh. -->
+                <div class="group relative overflow-hidden rounded-lg"><img src="https://drive.google.com/uc?id=YOUR_IMAGE_ID_1" alt="Khoảnh khắc 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"/></div>
+                <div class="group relative overflow-hidden rounded-lg col-span-2"><img src="https://drive.google.com/uc?id=YOUR_IMAGE_ID_2" alt="Khoảnh khắc 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"/></div>
+                <div class="group relative overflow-hidden rounded-lg"><img src="https://drive.google.com/uc?id=YOUR_IMAGE_ID_3" alt="Khoảnh khắc 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"/></div>
+                <div class="group relative overflow-hidden rounded-lg col-span-2"><img src="https://drive.google.com/uc?id=YOUR_IMAGE_ID_4" alt="Khoảnh khắc 4" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"/></div>
+                <div class="group relative overflow-hidden rounded-lg"><img src="https://drive.google.com/uc?id=YOUR_IMAGE_ID_5" alt="Khoảnh khắc 5" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"/></div>
+                <div class="group relative overflow-hidden rounded-lg"><img src="https://drive.google.com/uc?id=YOUR_IMAGE_ID_6" alt="Khoảnh khắc 6" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"/></div>
+            </div>
+        </section>
+        
+        <!-- SECTION 5: NHỮNG CÂU QUOTE TRUYỀN ĐỘNG LỰC -->
+        <section id="quotes" class="py-20 text-center">
+             <div class="max-w-3xl mx-auto">
+                <svg class="w-12 h-12 mx-auto text-blue-200" fill="currentColor" viewBox="0 0 16 16"> <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/> </svg>
+                <blockquote id="quote-text" class="mt-4 text-2xl font-semibold italic text-slate-800">Trên bước đường thành công không có dấu chân của kẻ lười biếng.</blockquote>
+                <p id="quote-author" class="mt-4 text-slate-500">- Lỗ Tấn</p>
+            </div>
+        </section>
+
+    </main>
     
-    <div id="confirm-modal"><!-- Modal xác nhận giữ nguyên --></div>
-    <div id="notification-toast"><!-- Toast giữ nguyên --></div>
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200">
+        <div class="container mx-auto px-6 py-6 text-center text-slate-500">
+            &copy; 2025 Lâm Quốc Minh. All Rights Reserved.
+        </div>
+    </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const publicPage = document.getElementById('public-page'); const appContainer = document.getElementById('app-container'); const showLoginBtn = document.getElementById('show-login-btn'); const loginModal = document.getElementById('login-modal'); const loginModalBackdrop = document.getElementById('login-modal-backdrop'); const loginForm = document.getElementById('login-form'); const usernameInput = document.getElementById('username'); const passwordInput = document.getElementById('password'); const loginError = document.getElementById('login-error'); const logoutBtn = document.getElementById('logout-btn'); const currentTimeEl = document.getElementById('current-time'); const taskFilters = document.getElementById('task-filters'); const notificationToast = document.getElementById('notification-toast'); const notificationText = document.getElementById('notification-text'); const tabBtns = document.querySelectorAll('.tab-btn'); const tabPanes = document.querySelectorAll('.tab-pane');
-        const taskForm = document.getElementById('task-form'); const taskTextInput = document.getElementById('task-text-input'); const categoryInput = document.getElementById('category-input'); const priorityInput = document.getElementById('priority-input'); const startDateTimeInput = document.getElementById('start-datetime-input'); const endDateTimeInput = document.getElementById('end-datetime-input'); const taskList = document.getElementById('task-list');
-        const achievementsListPublic = document.getElementById('achievements-list-public'); const achievementsListAdmin = document.getElementById('achievements-list-admin'); const achievementForm = document.getElementById('achievement-form'); const achievementTitleInput = document.getElementById('achievement-title'); const achievementDescriptionInput = document.getElementById('achievement-description');
-        // Thay đổi ID input
-        const achievementImageUrlInput = document.getElementById('achievement-image-url'); 
-        const confirmModal = document.getElementById('confirm-modal'); const confirmModalTitle = document.getElementById('confirm-modal-title'); const confirmModalText = document.getElementById('confirm-modal-text'); const confirmModalCancel = document.getElementById('confirm-modal-cancel'); const confirmModalOk = document.getElementById('confirm-modal-ok');
-        
-        let appState = { tasks: [], achievements: [] };
-        const STORAGE_KEY = 'minhWebApp_localStorage_final_v2'; // Key mới
+        // JavaScript cho Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-        const saveStateToStorage = () => { localStorage.setItem(STORAGE_KEY, JSON.stringify(appState)); };
-        const loadStateFromStorage = () => { const dataString = localStorage.getItem(STORAGE_KEY); if (dataString) { const loadedState = JSON.parse(dataString); appState.tasks = loadedState.tasks || []; appState.achievements = loadedState.achievements || []; } else { appState.achievements = [{id: Date.now() + 1, title: 'Chiến sĩ hoàn thành xuất sắc nhiệm vụ Chiến dịch Mùa hè xanh 2025', description: 'Chiến sĩ hoàn thành xuất sắc nhiệm vụ Chiến dịch Mùa hè xanh 2025', imageId: '12-wT41fQ47KypmgXKvSAi7PjA8MvWnUv'}];} renderTasks(); renderAchievements();};
-        const handleLogin = (e) => { e.preventDefault(); if (usernameInput.value === 'lamquocminh' && passwordInput.value === 'lamquocminh') { sessionStorage.setItem('isAdminLoggedIn', 'true'); checkLoginState(); loginModal.classList.add('hidden'); loginForm.reset(); loginError.textContent = ''; } else { loginError.textContent = 'Tài khoản hoặc mật khẩu không đúng.'; }};
-        const handleLogout = () => { sessionStorage.removeItem('isAdminLoggedIn'); checkLoginState(); };
-        const checkLoginState = () => { if (sessionStorage.getItem('isAdminLoggedIn') === 'true') { publicPage.style.display = 'none'; appContainer.style.display = 'block'; startClock(); } else { publicPage.style.display = 'block'; appContainer.style.display = 'none'; } loadStateFromStorage(); };
-        const showLoginModal = () => loginModal.classList.remove('hidden'); const hideLoginModal = () => loginModal.classList.add('hidden');
-        const startClock = () => { const updateTime = () => { const now = new Date(); const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' }; currentTimeEl.textContent = now.toLocaleDateString('vi-VN', options); }; updateTime(); setInterval(updateTime, 1000); };
-        const showNotification = (message, isError = false) => { notificationText.textContent = message; notificationToast.className = `fixed bottom-5 right-5 text-white py-3 px-5 rounded-lg shadow-lg transition-all duration-300 ${isError ? 'bg-red-500' : 'bg-green-500'}`; notificationToast.classList.remove('opacity-0', 'translate-y-4'); setTimeout(() => { notificationToast.classList.add('opacity-0', 'translate-y-4'); }, 3000); };
-        const showConfirm = (title, text) => { return new Promise((resolve) => { confirmModalTitle.textContent = title; confirmModalText.textContent = text; confirmModal.classList.remove('hidden'); const close = (result) => { confirmModal.classList.add('hidden'); resolve(result); }; confirmModalOk.onclick = () => close(true); confirmModalCancel.onclick = () => close(false); }); };
+        // JavaScript cho Formspree
+        const form = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
         
-        // HÀM MỚI: Tự động tách ID từ Link
-        const extractGoogleDriveId = (url) => {
-            let id = null;
-            const regexes = [
-                /drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]{28,})/i,
-                /drive\.google\.com\/uc\?id=([a-zA-Z0-9_-]{28,})/i
-            ];
-            for (const regex of regexes) {
-                const match = url.match(regex);
-                if (match && match[1]) {
-                    id = match[1];
-                    break;
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    formFeedback.innerHTML = "Cảm ơn lời tâm sự của bạn. Tôi đã nhận được rồi!";
+                    formFeedback.className = "mb-4 text-center text-green-600";
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formFeedback.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            formFeedback.innerHTML = "Oops! Đã có lỗi xảy ra khi gửi tin nhắn.";
+                        }
+                        formFeedback.className = "mb-4 text-center text-red-600";
+                    })
                 }
-            }
-            return id;
-        };
-        
-        const renderAchievements = () => { achievementsListPublic.innerHTML = ''; achievementsListAdmin.innerHTML = ''; if (appState.achievements.length === 0) { const placeholder = '<div class="text-center text-slate-500 py-8"><p>Chưa có thành tích nào được thêm.</p></div>'; achievementsListPublic.innerHTML = placeholder; achievementsListAdmin.innerHTML = placeholder; return; } appState.achievements.forEach(ach => { if(!ach.imageId) return; const imageUrl = `https://drive.google.com/uc?id=${ach.imageId}`; const publicHtml = `<div class="card-style rounded-lg p-6 flex flex-col md:flex-row items-center gap-6"> <img src="${imageUrl}" alt="${ach.title}" class="w-full md:w-1/3 h-48 rounded-lg object-cover"> <div class="text-center md:text-left"> <h3 class="text-xl font-bold text-slate-800">${ach.title}</h3> <p class="text-slate-500 mt-2">${ach.description}</p> </div> </div>`; achievementsListPublic.innerHTML += publicHtml; const adminHtml = `<div class="flex items-start gap-4 p-2 border-b border-slate-200"> <img src="${imageUrl}" alt="${ach.title}" class="w-16 h-16 rounded-md object-cover flex-shrink-0"> <div class="flex-grow"> <h4 class="font-semibold text-slate-800">${ach.title}</h4> <p class="text-sm text-slate-500">${ach.description}</p> </div> <button data-id="${ach.id}" class="delete-achievement-btn text-slate-400 hover:text-red-500 p-1 flex-shrink-0" title="Xóa"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/><path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/></svg></button> </div>`; achievementsListAdmin.innerHTML += adminHtml; }); };
-        const handleAddAchievement = (e) => { e.preventDefault(); const imageUrl = achievementImageUrlInput.value; const imageId = extractGoogleDriveId(imageUrl); if (!imageId) { showNotification('Link ảnh Google Drive không hợp lệ.', true); return; } const newAchievement = { id: Date.now(), title: achievementTitleInput.value, description: achievementDescriptionInput.value, imageId: imageId }; appState.achievements.unshift(newAchievement); saveStateToStorage(); renderAchievements(); achievementForm.reset(); showNotification('Đã thêm thành tích thành công!'); };
-        const handleDeleteAchievement = async (achievementId) => { const confirmed = await showConfirm('Xóa thành tích?', 'Bạn có chắc chắn muốn xóa thành tích này không?'); if (confirmed) { appState.achievements = appState.achievements.filter(ach => ach.id !== achievementId); saveStateToStorage(); renderAchievements(); showNotification('Đã xóa thành tích.'); } };
-        
-        const renderTasks = () => { /* Giữ nguyên hàm renderTasks */ };
-        const handleAddTask = (e) => { /* Giữ nguyên hàm handleAddTask */ };
-        const handleDeleteTask = async (taskId) => { /* Giữ nguyên hàm handleDeleteTask */ };
-        const handleToggleTask = (taskId) => { /* Giữ nguyên hàm handleToggleTask */ };
-        const switchTab = (e) => { const tabId = e.currentTarget.dataset.tab; tabBtns.forEach(btn => btn.classList.remove('active')); tabPanes.forEach(pane => pane.classList.add('hidden')); e.currentTarget.classList.add('active'); document.getElementById(`${tabId}-content`).classList.remove('hidden'); };
-        
-        // Gán sự kiện
-        showLoginBtn.addEventListener('click', showLoginModal); loginModalBackdrop.addEventListener('click', hideLoginModal); loginForm.addEventListener('submit', handleLogin); logoutBtn.addEventListener('click', handleLogout); document.body.addEventListener('click', e => { const deleteTaskBtn = e.target.closest('.delete-task-btn'); const deleteAchieveBtn = e.target.closest('.delete-achievement-btn'); if (deleteTaskBtn) handleDeleteTask(parseInt(deleteTaskBtn.dataset.id)); if (deleteAchieveBtn) handleDeleteAchievement(parseInt(deleteAchieveBtn.dataset.id)); }); document.body.addEventListener('change', e => { if (e.target.closest('input[type=checkbox]')) handleToggleTask(e.target.dataset.id); }); taskFilters.addEventListener('click', e => { if (e.target.tagName === 'BUTTON') { taskFilters.querySelector('.active').classList.remove('active'); e.target.classList.add('active'); currentFilter = e.target.dataset.filter; renderTasks(); }});
-        tabBtns.forEach(btn => btn.addEventListener('click', switchTab));
-        taskForm.addEventListener('submit', handleAddTask);
-        achievementForm.addEventListener('submit', handleAddAchievement);
-        
-        checkLoginState();
-    });
+            }).catch(error => {
+                formFeedback.innerHTML = "Oops! Đã có lỗi xảy ra khi gửi tin nhắn.";
+                formFeedback.className = "mb-4 text-center text-red-600";
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+
     </script>
 </body>
 </html>
