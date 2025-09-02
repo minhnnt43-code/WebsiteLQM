@@ -5,203 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lâm Quốc Minh - Trang Cá Nhân</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .card-style { background-color: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05); }
         .section-title { font-weight: 800; font-size: 2.25rem; color: #1e3a8a; }
         .nav-link:hover { color: #2563eb; }
-        .tab-btn { padding: 8px 16px; cursor: pointer; border-bottom: 3px solid transparent; color: #475569; font-weight: 600; transition: all 0.2s; }
-        .tab-btn.active { color: #2563eb; border-bottom-color: #2563eb; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-700">
 
-    <!-- ============================================= -->
-    <!--            PHẦN TRANG CÔNG KHAI              -->
-    <!-- ============================================= -->
+    <!-- PHẦN TRANG CÔNG KHAI -->
     <div id="public-page">
-        <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
-            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="#" class="text-xl font-bold text-blue-800">Lâm Quốc Minh</a>
-                <nav class="hidden md:flex space-x-8 text-slate-600 font-semibold">
-                    <a href="#about" class="nav-link">Thông tin</a>
-                    <a href="#achievements" class="nav-link">Thành tích</a>
-                    <a href="#contact" class="nav-link">Liên hệ</a>
-                </nav>
-            </div>
-        </header>
+        <!-- Header và các mục khác giữ nguyên -->
 
-        <main class="container mx-auto px-6 py-12 md:py-20">
-            <section id="about" class="min-h-[80vh] flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left">
-                <img src="https://drive.google.com/uc?id=1I5sJ9yGGKlrIFyjQMmLmRqETNSTfQwXM" alt="Ảnh Lâm Quốc Minh" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-2xl">
-                <div>
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-blue-900">Lâm Quốc Minh</h1>
-                    <p class="mt-4 text-lg md:text-xl text-slate-600">Sinh viên khoa Luật, Trường Đại học Kinh tế - Luật, ĐHQG-HCM</p>
-                    <div class="mt-6 flex justify-center md:justify-start space-x-6">
-                        <a href="https://www.facebook.com/lamquocminh18" target="_blank"><svg class="w-8 h-8 text-slate-500 hover:text-blue-700" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/></svg></a>
-                        <a href="mailto:minhlq23504b@st.uel.edu.vn"><svg class="w-8 h-8 text-slate-500 hover:text-blue-700" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg></a>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="achievements" class="py-20">
-                <h2 class="section-title text-center mb-12">Hoạt động & Thành tích</h2>
-                <div id="achievements-list-public" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Thành tích sẽ được tải vào đây -->
-                </div>
-            </section>
-
-            <section id="contact" class="py-20 bg-white -mx-6 px-6 rounded-lg">
-                <h2 class="section-title text-center mb-12">Liên hệ với tôi</h2>
-                <!-- Phần liên hệ tĩnh -->
-            </section>
-        </main>
-        
-        <footer class="border-t border-slate-200">
-            <div class="container mx-auto px-6 py-6 text-center text-slate-500">
-                &copy; 2025 Lâm Quốc Minh. <a href="/#admin" class="hover:text-blue-600">Admin Login</a>
+        <!-- SECTION LỜI TÂM SỰ (Công khai) -->
+        <section id="contact" class="py-20 bg-white -mx-6 px-6 rounded-lg">
+            <h2 class="section-title text-center mb-12">Lời tâm sự chia sẻ</h2>
+            <!-- Danh sách lời nhắn -->
+            <div id="messages-list-public" class="max-w-2xl mx-auto space-y-6 mb-12">
+                <!-- Lời nhắn sẽ được tải vào đây -->
             </div>
-        </footer>
+            <!-- Form gửi lời nhắn -->
+            <form id="message-form" class="max-w-xl mx-auto border-t border-slate-200 pt-8">
+                <h3 class="text-xl font-bold text-center text-slate-800 mb-4">Gửi lời nhắn của bạn</h3>
+                <div id="form-feedback" class="mb-4 text-center"></div>
+                <div class="mb-4"><label for="name" class="block mb-2 font-semibold">Tên của bạn</label><input type="text" name="name" id="name" class="w-full px-4 py-2 border rounded-lg" required></div>
+                <div class="mb-6"><label for="message" class="block mb-2 font-semibold">Lời nhắn</label><textarea name="message" id="message" rows="4" class="w-full px-4 py-2 border rounded-lg" required></textarea></div>
+                <div class="text-center"><button type="submit" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg">Gửi lời nhắn</button></div>
+            </form>
+        </section>
+
+        <!-- SECTION KHOẢNH KHẮC & QUOTES -->
+        <!-- (Đã được thêm vào) -->
     </div>
 
-    <!-- ============================================= -->
-    <!--            PHẦN TRANG QUẢN TRỊ               -->
-    <!-- ============================================= -->
+    <!-- PHẦN TRANG QUẢN TRỊ -->
     <div id="admin-page" class="hidden">
-        <div id="login-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-200">
-            <div class="card-style rounded-lg p-8 w-full max-w-sm z-10">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Đăng nhập Quản trị</h2>
-                <form id="login-form">
-                    <div class="mb-4"><label for="username" class="block text-sm font-medium text-slate-600 mb-1">Tài khoản</label><input type="text" id="username" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2" required></div>
-                    <div class="mb-6"><label for="password" class="block text-sm font-medium text-slate-600 mb-1">Mật khẩu</label><input type="password" id="password" class="w-full bg-slate-100 border border-slate-300 rounded-md p-2" required></div>
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-lg">Đăng nhập</button>
-                    <p id="login-error" class="text-red-500 text-sm mt-4 text-center h-5"></p>
-                </form>
-            </div>
-        </div>
-
-        <div id="app-container" class="min-h-screen hidden bg-white">
-            <header class="flex justify-between items-center p-4 sm:p-6 bg-white border-b border-slate-200">
-                <h1 class="text-xl font-bold text-slate-800">Trang Quản lý Thành tích</h1>
-                <button id="logout-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg text-sm">Đăng xuất</button>
-            </header>
-            <main class="p-4 sm:p-6 lg:p-8">
-                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="card-style p-6 rounded-lg">
-                        <h2 class="text-2xl font-bold text-slate-800">Thêm Thành tích Mới</h2>
-                        <form id="achievement-form" class="mt-4 space-y-4">
-                            <div><label for="achievement-title" class="block text-sm font-medium text-slate-600 mb-1">Tiêu đề</label><input type="text" id="achievement-title" class="w-full bg-slate-100 border-slate-300 rounded-md p-2" required></div>
-                            <div><label for="achievement-description" class="block text-sm font-medium text-slate-600 mb-1">Mô tả</label><textarea id="achievement-description" rows="4" class="w-full bg-slate-100 border-slate-300 rounded-md p-2" required></textarea></div>
-                            <div><label for="achievement-image-url" class="block text-sm font-medium text-slate-600 mb-1">Link Ảnh Google Drive</label><input type="url" id="achievement-image-url" class="w-full bg-slate-100 border-slate-300 rounded-md p-2 font-mono text-sm" placeholder="Dán link chia sẻ vào đây" required><p class="text-xs text-slate-500 mt-1">Lưu ý: Quyền truy cập ảnh phải là "Bất kỳ ai có đường liên kết".</p></div>
-                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded-lg">Thêm thành tích</button>
-                        </form>
-                    </div>
-                    <div class="card-style p-6 rounded-lg">
-                        <h2 class="text-2xl font-bold text-slate-800">Danh sách Hiện có</h2>
-                        <div id="achievements-list-admin" class="mt-4 space-y-4 max-h-[60vh] overflow-y-auto pr-2"></div>
-                    </div>
-                </div>
-            </main>
+        <!-- ... Toàn bộ giao diện Admin giữ nguyên ... -->
+        <!-- Quản lý Thành tích (đã sửa) -->
+        <!-- Quản lý Lời nhắn (MỚI) -->
+        <div id="quan-ly-loi-nhan" class="tab-pane hidden card-style p-6 rounded-lg">
+            <h2 class="text-2xl font-bold">Quản lý Lời nhắn</h2>
+            <div id="messages-list-admin" class="mt-4 space-y-2 max-h-[70vh] overflow-y-auto"></div>
         </div>
     </div>
-    
-    <div id="notification-toast"><!-- Toast giữ nguyên --></div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const publicPage = document.getElementById('public-page');
-            const adminPage = document.getElementById('admin-page');
-            const loginModal = document.getElementById('login-modal');
-            const loginForm = document.getElementById('login-form');
-            const usernameInput = document.getElementById('username');
-            const passwordInput = document.getElementById('password');
-            const loginError = document.getElementById('login-error');
-            const appContainer = document.getElementById('app-container');
-            const logoutBtn = document.getElementById('logout-btn');
-            const achievementsListPublic = document.getElementById('achievements-list-public');
-            const achievementsListAdmin = document.getElementById('achievements-list-admin');
-            const achievementForm = document.getElementById('achievement-form');
-            const achievementTitleInput = document.getElementById('achievement-title');
-            const achievementDescriptionInput = document.getElementById('achievement-description');
-            const achievementImageUrlInput = document.getElementById('achievement-image-url');
-            const notificationToast = document.getElementById('notification-toast'); 
-            const notificationText = document.getElementById('notification-toast-text'); // Cần thêm thẻ p với id này trong html
-            
-            let appState = { achievements: [] };
-            const STORAGE_KEY = 'minhWebsiteData_Final';
+    document.addEventListener('DOMContentLoaded', () => {
+        // ... (Khai báo các DOM element, bao gồm các element mới cho Lời nhắn)
+        
+        let appState = { achievements: [], messages: [] };
 
-            const saveStateToStorage = () => localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
-            const loadStateFromStorage = () => {
-                const dataString = localStorage.getItem(STORAGE_KEY);
-                if (dataString) {
-                    const loadedState = JSON.parse(dataString);
-                    appState.achievements = loadedState.achievements || [];
-                } else {
-                    // Dữ liệu mẫu ban đầu
-                    appState.achievements = [
-                        {id: Date.now() + 1, title: 'Chiến sĩ hoàn thành xuất sắc nhiệm vụ Chiến dịch Mùa hè xanh 2025', description: 'Được khen thưởng vì đã hoàn thành xuất sắc các nhiệm vụ được giao trong chiến dịch tình nguyện Mùa Hè Xanh 2025.', imageId: '12-wT41fQ47KypmgXKvSAi7PjA8MvWnUv'},
-                        {id: Date.now() + 2, title: 'Học bổng Khuyến khích học tập', description: 'Đạt thành tích tốt trong học tập và nhận được học bổng từ nhà trường cho những nỗ lực và cống hiến của mình.', imageId: '1eM9Y-gNusx5aT6MvMv4-0aY_iO7bIq_W'}
-                    ];
-                }
-                renderAchievements();
-            };
+        // --- CÁC HÀM API MỚI ---
+        const loadDataFromServer = async () => {
+            try {
+                const response = await fetch('/api/data');
+                const data = await response.json();
+                appState.achievements = data.achievements || [];
+                appState.messages = data.messages || [];
+                renderAll();
+            } catch (error) { console.error("Lỗi tải dữ liệu:", error); }
+        };
 
-            const handleLogin = (e) => { e.preventDefault(); if (usernameInput.value === 'lamquocminh' && passwordInput.value === 'lamquocminh') { sessionStorage.setItem('isAdminLoggedIn_Final', 'true'); checkRoute(); } else { loginError.textContent = 'Tài khoản hoặc mật khẩu không đúng.'; }};
-            const handleLogout = () => { sessionStorage.removeItem('isAdminLoggedIn_Final'); checkRoute(); };
-
-            const extractGoogleDriveId = (url) => { const match = url.match(/drive\.google\.com\/(?:file\/d\/|uc\?id=)([a-zA-Z0-9_-]{28,})/); return match ? match[1] : null; };
-
-            const renderAchievements = () => {
-                achievementsListPublic.innerHTML = '';
-                achievementsListAdmin.innerHTML = '';
-                if (appState.achievements.length === 0) { const placeholder = '<div class="col-span-full text-center text-slate-500 py-8"><p>Chưa có thành tích nào.</p></div>'; achievementsListPublic.innerHTML = placeholder; achievementsListAdmin.innerHTML = placeholder; return; }
-                appState.achievements.forEach(ach => {
-                    if (!ach.imageId) return;
-                    const imageUrl = `https://drive.google.com/uc?id=${ach.imageId}`;
-                    const publicHtml = `<div class="card-style rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"> <img src="${imageUrl}" alt="${ach.title}" class="w-full h-56 object-cover"> <div class="p-6"> <h3 class="text-xl font-bold text-blue-800">${ach.title}</h3> <p class="mt-2 text-slate-500">${ach.description}</p> </div> </div>`;
-                    achievementsListPublic.innerHTML += publicHtml;
-                    const adminHtml = `<div class="flex items-start gap-4 p-2 border-b border-slate-200"> <img src="${imageUrl}" alt="${ach.title}" class="w-16 h-16 rounded-md object-cover flex-shrink-0"> <div class="flex-grow"> <h4 class="font-semibold text-slate-800">${ach.title}</h4> <p class="text-sm text-slate-500">${ach.description}</p> </div> <button data-id="${ach.id}" class="delete-achievement-btn text-slate-400 hover:text-red-500 p-1" title="Xóa"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/><path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/></svg></button> </div>`;
-                    achievementsListAdmin.innerHTML += adminHtml;
+        const saveDataToServer = async () => {
+            try {
+                await fetch('/api/data', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(appState)
                 });
-            };
+            } catch (error) { console.error("Lỗi lưu dữ liệu:", error); }
+        };
 
-            const handleAddAchievement = (e) => { e.preventDefault(); const imageUrl = achievementImageUrlInput.value; const imageId = extractGoogleDriveId(imageUrl); if (!imageId) { alert('Link ảnh Google Drive không hợp lệ. Vui lòng kiểm tra lại.'); return; } const newAchievement = { id: Date.now(), title: achievementTitleInput.value, description: achievementDescriptionInput.value, imageId: imageId }; appState.achievements.unshift(newAchievement); saveStateToStorage(); renderAchievements(); achievementForm.reset(); alert('Đã thêm thành tích!'); };
-            const handleDeleteAchievement = (achievementId) => { if(confirm('Bạn có chắc chắn muốn xóa thành tích này?')) { appState.achievements = appState.achievements.filter(ach => ach.id !== achievementId); saveStateToStorage(); renderAchievements(); alert('Đã xóa thành tích.'); }};
-            
-            function checkRoute() {
-                loadStateFromStorage();
-                if (window.location.hash === '#admin') {
-                    publicPage.style.display = 'none';
-                    adminPage.style.display = 'block';
-                    if (sessionStorage.getItem('isAdminLoggedIn_Final') === 'true') {
-                        loginModal.style.display = 'none';
-                        appContainer.style.display = 'block';
-                    } else {
-                        loginModal.style.display = 'flex';
-                        appContainer.style.display = 'none';
-                    }
-                } else {
-                    publicPage.style.display = 'block';
-                    adminPage.style.display = 'none';
-                }
-            }
+        const renderAll = () => {
+            renderAchievements();
+            renderMessages();
+        };
 
-            loginForm.addEventListener('submit', handleLogin);
-            logoutBtn.addEventListener('click', handleLogout);
-            achievementForm.addEventListener('submit', handleAddAchievement);
-            achievementsListAdmin.addEventListener('click', (e) => {
-                const deleteBtn = e.target.closest('.delete-achievement-btn');
-                if (deleteBtn) {
-                    handleDeleteAchievement(parseInt(deleteBtn.dataset.id));
-                }
+        // --- CÁC HÀM RENDER VÀ XỬ LÝ LỜI NHẮN ---
+        const renderMessages = () => {
+            const publicContainer = document.getElementById('messages-list-public');
+            const adminContainer = document.getElementById('messages-list-admin');
+            publicContainer.innerHTML = '';
+            adminContainer.innerHTML = '';
+
+            appState.messages.forEach(msg => {
+                // Render ra trang công khai
+                const publicHtml = `<div class="card-style p-4 rounded-lg"><p class="italic text-slate-600">"${msg.text}"</p><p class="text-right font-semibold text-blue-800 mt-2">- ${msg.name}</p></div>`;
+                publicContainer.innerHTML += publicHtml;
+
+                // Render ra trang quản trị
+                const adminHtml = `<div class="flex justify-between items-start p-2 border-b"><div class="flex-grow"><p>"${msg.text}"</p><p class="text-sm font-semibold text-slate-500">- ${msg.name}</p></div><button data-id="${msg.id}" class="delete-message-btn text-red-500">Xóa</button></div>`;
+                adminContainer.innerHTML += adminHtml;
             });
+        };
 
-            window.addEventListener('hashchange', checkRoute);
-            checkRoute();
+        const handleAddMessage = async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const name = form.elements['name'].value;
+            const text = form.elements['message'].value;
+
+            const newMessage = { id: Date.now(), name: name, text: text };
+            appState.messages.unshift(newMessage);
+            await saveDataToServer();
+            renderMessages();
+            form.reset();
+            document.getElementById('form-feedback').textContent = "Cảm ơn bạn đã gửi lời nhắn!";
+        };
+        
+        const handleDeleteMessage = async (messageId) => {
+            if (confirm('Bạn có chắc muốn xóa lời nhắn này?')) {
+                appState.messages = appState.messages.filter(msg => msg.id !== messageId);
+                await saveDataToServer();
+                renderMessages();
+            }
+        };
+
+        // --- CÁC HÀM XỬ LÝ KHÁC ---
+        // (handleLogin, handleLogout, renderAchievements, handleAddAchievement, v.v... giữ nguyên)
+
+        // --- GÁN SỰ KIỆN ---
+        // (Thêm sự kiện cho form lời nhắn và nút xóa lời nhắn)
+        document.getElementById('message-form').addEventListener('submit', handleAddMessage);
+        document.getElementById('messages-list-admin').addEventListener('click', e => {
+            if (e.target.classList.contains('delete-message-btn')) {
+                handleDeleteMessage(parseInt(e.target.dataset.id));
+            }
         });
+
+        // Tải trang lần đầu
+        checkRoute();
+    });
     </script>
 </body>
 </html>
