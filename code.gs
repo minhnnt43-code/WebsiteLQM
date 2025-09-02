@@ -2,7 +2,7 @@
  * @OnlyCurrentDoc
  */
 
-const APP_FOLDER_NAME = "LÂM QUỐC MINH - DASHBOARD";
+const APP_FOLDER_NAME = "MINH MINH NÈ - DASHBOARD";
 const TASK_ATTACHMENTS_FOLDER_NAME = "Task Attachments";
 
 function doGet(e) {
